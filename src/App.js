@@ -1,11 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
+//componentes de clase
+
+//componentes funcionales
 function App() {
+  const jsx = <h1>Federico Blanco</h1>;
+
+  let styles = {
+    color: "red",
+  };
+
+  const stylesJsx = <div style={styles}>{jsx}</div>;
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        {stylesJsx}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
