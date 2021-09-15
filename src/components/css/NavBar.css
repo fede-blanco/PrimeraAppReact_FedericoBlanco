@@ -1,0 +1,15 @@
+.logoNav {
+    width: 80px;
+    height: 80px;
+    padding-right: 10px;
+}
+
+.brandName {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+    font-weight: 700;
+}

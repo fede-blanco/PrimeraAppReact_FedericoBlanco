@@ -1,11 +1,12 @@
-import { navbar } from "react-bootstrap";
+import './css/NavBar.css'
+import logo192 from '../assets/imagenes/logo192.png'
 
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Sitio de Federico Blanco
+        <a className="navbar-brand d-flex" href="#">
+          <img src={logo192} className="logoNav" alt="logoReact"></img> <span className="brandName align-self-center">Federico Blanco</span>
         </a>
         <button
           className="navbar-toggler"
