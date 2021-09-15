@@ -9,12 +9,6 @@ import NavBar from "./components/NavBar";
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
-  </React.StrictMode>,
-  document.getElementById("barraNavegacion")
-);
-
-ReactDOM.render(
-  <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById("root")
