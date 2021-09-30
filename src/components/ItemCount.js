@@ -29,24 +29,21 @@ const ItemCount = (props) => {
     }
 
 
+    //se Modifico el Componente ItemCount de una tarjeta a un "inputgroup" pero mantiene las mismas funcionalidades
 
-    return (
-        <div className="card mx-auto" style={{ width: '18rem' }}>
+ return (
+        <>
 
-            <div className="card-header text-center">
-                <h2>{count}</h2>
-            </div>
 
-            <div className="card-body text-center">
-                <button className="btn btn-secondary w-25 mx-1" onClick={restarCount}>-</button>
-                <button className="btn btn-secondary w-25 mx-1" onClick={sumarCount}>+</button>
-            </div>
-
-            <div className="card-footer text-center my-2">
-                <button className="btn btn-warning w-50" onClick={ agregarAlCarrito}>Agregar al Carrito</button>
-            </div>
-
+        <div className="input-group mb-3">
+            <button className="btn btn-outline-secondary" type="button" id="button-addon1" onClick={restarCount}>-</button>
+            <input type="text" className="form-control text-center" placeholder={count} aria-label="Example text with button addon" aria-describedby="button-addon1" />
+            <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={sumarCount}>+</button>
         </div>
+        <button className="btn btn-warning w-100" onClick={ agregarAlCarrito}>Agregar al Carrito</button>
+
+
+        </>
 
     );
 
