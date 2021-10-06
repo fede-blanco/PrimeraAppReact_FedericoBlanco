@@ -10,10 +10,7 @@ const Item = (props) => {
   const { id, title, description, price, pictureUrl, selectItem } = props;
 
   return (
-    <div
-      className="col col-md-6 col-lg-4 m-auto"
-      onClick={() => selectItem({ ...props })}
-    >
+    <div className="col col-md-6 col-lg-4 m-auto">
       <div
         id={id}
         className="card border-dark text-center m-2"
@@ -24,6 +21,7 @@ const Item = (props) => {
           className="card-img-top p-1"
           style={{ height: "32rem" }}
           alt="..."
+          //onClick={() => selectItem({ ...props })}
         />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
