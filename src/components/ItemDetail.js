@@ -1,12 +1,15 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ItemCount from "./ItemCount";
+import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 const ItemDetail = (props) => {
   const { id, title, description, price, pictureUrl, selectItem } = props;
 
-  //dentro de las props se trajo  a "selectItem" para poder asociar a una variable "closeDetail" una funcion que lo vuelva "null" y haga que se renderize nuevamente la lista de items en vez del detalle
-  const closeDetail = () => selectItem(null);
+  const history = useHistory();
+
+  const closeDetail = () => history.goBack();
 
   //retorna una tarjeta con todos los datos del item seleccionado
   return (
@@ -44,6 +47,8 @@ const ItemDetail = (props) => {
         </div>
       </div>
     </div>
+
+    //PRUEBAS DE ITEMS Y PROPS
     // <div>
     //     Item Detail
     //     <h1>Id: {id}</h1>
