@@ -31,9 +31,9 @@ const Item = (props) => {
           <li className="list-group-item">
             <strong>${price}</strong>
           </li>
-          <li className="list-group-item">
+          {/* <li className="list-group-item">
             <ItemCount stock="10" initial="1" />
-          </li>
+          </li> */}
         </ul>
         <div className="card-body">
           <Link exact to={`/item/${id}`} className="btn btn-secondary">

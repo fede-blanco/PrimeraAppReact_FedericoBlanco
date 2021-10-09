@@ -4,6 +4,8 @@ import "./App.css";
 import ItemListContainer from "./components/ItemListContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import CartWidget from "./components/CartWidget";
+import Cart from "./components/Cart";
 
 //componentes funcionales
 function App() {
@@ -42,6 +44,11 @@ function App() {
               error={error}
               setError={setError}
             />
+          </Route>
+
+          {/* Ruta que lleva del boton 'terminar compra' al componente carrito */}
+          <Route exact path="/cart">
+            <Cart />
           </Route>
         </Switch>
         {/* si error deja de ser null y pasa a contener algo se renderizara el mensaje de error que se encontrara dentro del estado error al haber sido seteado en el catch de la promesa por el fallo de la misma */}

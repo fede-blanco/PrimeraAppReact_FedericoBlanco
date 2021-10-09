@@ -8,6 +8,7 @@ export default [
     pictureUrl:
       "https://http2.mlstatic.com/D_NQ_NP_911089-MLA44273239284_122020-O.webp",
     categoria: "Guitarra-criolla",
+    stock: 10,
   },
   {
     id: 1,
@@ -17,15 +18,18 @@ export default [
     pictureUrl:
       "https://http2.mlstatic.com/D_NQ_NP_633887-MLA43145580826_082020-O.webp",
     categoria: "Guitarra-electrica",
+    stock: 10,
   },
   {
     id: 2,
     title: "Squier Guitarra Eléctrica Affinity Stratocaster",
     description: "Guitarra electrica",
+    stock: 10,
     price: 70000,
     pictureUrl:
       "https://http2.mlstatic.com/D_NQ_NP_702019-MLA42319037133_062020-O.webp",
     categoria: "Guitarra-electrica",
+    stock: 10,
   },
   {
     id: 3,
@@ -35,6 +39,7 @@ export default [
     pictureUrl:
       "https://http2.mlstatic.com/D_NQ_NP_675841-MLA43054184144_082020-O.webp",
     categoria: "Guitarra-electroacustica",
+    stock: 10,
   },
   {
     id: 4,
@@ -44,5 +49,6 @@ export default [
     pictureUrl:
       "https://http2.mlstatic.com/D_NQ_NP_885128-MLA32880469711_112019-O.webp",
     categoria: "Guitarra-electrica",
+    stock: 10,
   },
 ];
