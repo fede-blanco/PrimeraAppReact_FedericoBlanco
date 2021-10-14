@@ -3,14 +3,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ItemCount from "./ItemCount";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
+import { useCartContext } from "./CartContext";
 
-const ItemDetail = (props) => {
-  const { id, title, description, price, stock, pictureUrl, selectItem } =
-    props;
+export const ItemDetail = (item) => {
+  const { id, title, description, price, stock, pictureUrl } = item;
+
+  const { addItem } = useCartContext();
 
   const history = useHistory();
 
   const [cartItems, setCartItems] = useState(null);
+
+  const onAdd = (qty) => {
+    addItem(item, qty);
+    setCartItems(item);
+  };
 
   const closeDetail = () => history.goBack();
 
@@ -41,13 +48,23 @@ const ItemDetail = (props) => {
             </li>
             <li className="list-group-item">
               {cartItems ? (
-                <Link exact to="/cart">
-                  <button className="btn btn-success">
-                    Terminar mi compra
-                  </button>
-                </Link>
+                <>
+                  <ItemCount
+                    onAdd={onAdd}
+                    stock={stock}
+                    initial="1"
+                    cartItems={cartItems}
+                    setCartItems={setCartItems}
+                  />
+                  <Link exact to="/cart">
+                    <button className="btn btn-success my-3">
+                      Terminar mi compra
+                    </button>
+                  </Link>
+                </>
               ) : (
                 <ItemCount
+                  onAdd={onAdd}
                   stock={stock}
                   initial="1"
                   cartItems={cartItems}

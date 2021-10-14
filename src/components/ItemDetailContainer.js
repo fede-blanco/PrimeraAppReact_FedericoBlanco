@@ -67,9 +67,7 @@ const ItemDetailContainer = ({
 
   //se retorna el componente <ItemDetail/> habiendole pasado como props el item seleccionado y el metodo selectItem para luego poder utilizarlo para setear el estado de "selectedItem" a "null" para que el estado de "Item" pase a null y no se renderize mas <ItemDetail/>
   return (
-    <div className="row text-center">
-      {item && <ItemDetail {...item} selectItem={selectItem} />}
-    </div>
+    <div className="row text-center">{item && <ItemDetail {...item} />}</div>
   );
 };
 

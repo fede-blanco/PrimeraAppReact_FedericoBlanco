@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ItemCount = (props) => {
-  const { stock, initial, cartItems, setCartItems } = props;
+  const { stock, initial, cartItems, setCartItems, onAdd } = props;
   //creacion de la variable "count" y de setCount que sera la funcion que modificara dicha variable >> se utiliza useState para indicar el valor inicial del estado
   const [count, setCount] = useState(parseInt(initial));
 
@@ -15,16 +15,6 @@ const ItemCount = (props) => {
   const sumarCount = () => {
     if (count < stock) {
       setCount(count + 1);
-    }
-  };
-
-  //funcion que agrega la cantidad de items seleccionada al estado cartItems que es un estado perteneciente a ItemDetail.js
-  const agregarAlCarrito = () => {
-    if (count > 0 && count <= stock) {
-      alert("SE AGREGARON TODOS LOS ITEMS ELEGIDOS AL CARRITO");
-      setCartItems(cartItems + count);
-    } else {
-      alert("NO SE AGREGARON ITEMS AL CARRITO");
     }
   };
 
@@ -57,7 +47,7 @@ const ItemCount = (props) => {
           +
         </button>
       </div>
-      <button className="btn btn-warning w-100" onClick={agregarAlCarrito}>
+      <button className="btn btn-warning w-100" onClick={() => onAdd(count)}>
         Agregar al Carrito
       </button>
     </>
