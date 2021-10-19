@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import ItemDetailContainer from "./ItemDetailContainer";
 import { useParams } from "react-router-dom";
-import serverData from "./data/server-data";
+import serverData from "./data/serverData";
 
 const ItemListContainer = ({ text, setLoading, setError }) => {
   //Se inicializan los estados de "items", "loading" y "error"

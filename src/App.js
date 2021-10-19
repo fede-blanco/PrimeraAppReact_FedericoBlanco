@@ -49,7 +49,7 @@ function App() {
             </Route>
 
             {/* Ruta que lleva del boton 'terminar compra' al componente carrito */}
-            <Route exact path="/cart">
+            <Route path="/cart">
               <Cart />
             </Route>
           </Switch>

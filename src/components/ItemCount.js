@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ItemCount = (props) => {
-  const { stock, initial, cartItems, setCartItems, onAdd } = props;
+  const { stock, initial, onAdd } = props;
   //creacion de la variable "count" y de setCount que sera la funcion que modificara dicha variable >> se utiliza useState para indicar el valor inicial del estado
   const [count, setCount] = useState(parseInt(initial));
 
