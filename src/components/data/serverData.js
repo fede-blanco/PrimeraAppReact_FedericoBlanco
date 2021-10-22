@@ -24,7 +24,6 @@ export default [
     id: 2,
     title: "Squier Guitarra Eléctrica Affinity Stratocaster",
     description: "Guitarra electrica",
-    stock: 10,
     price: 70000,
     pictureUrl:
       "https://http2.mlstatic.com/D_NQ_NP_702019-MLA42319037133_062020-O.webp",
@@ -34,7 +33,7 @@ export default [
   {
     id: 3,
     title: "Guitarra Electroacústica Fender Concert",
-    description: "Guitarra-electroacustica",
+    description: "Guitarra electroacustica",
     price: 75000,
     pictureUrl:
       "https://http2.mlstatic.com/D_NQ_NP_675841-MLA43054184144_082020-O.webp",
