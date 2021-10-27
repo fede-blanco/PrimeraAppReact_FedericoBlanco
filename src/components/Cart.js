@@ -2,10 +2,9 @@ import React from "react";
 import { useCartContext } from "./CartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import { Button, Container, ListGroup } from "react-bootstrap";
 
 const Cart = () => {
-  const { cartList, clearCart, removeItem } = useCartContext();
+  const { cartList, clearCart, removeItem, totalPrice } = useCartContext();
 
   console.log(cartList);
 
@@ -49,7 +48,7 @@ const Cart = () => {
                       <img
                         src={item.item.pictureUrl}
                         className="card-img-top p-1 m-auto"
-                        style={{ height: "32rem", width: "18rem" }}
+                        style={{ height: "5rem", width: "3rem" }}
                         alt="..."
                       />
                     </div>
@@ -58,13 +57,28 @@ const Cart = () => {
               );
             })}
           </div>
-          <button
-            className="btn bg-warning my-3"
-            //cuando se clickea se ejecuta una funcion que llama a "removeItem" con parametro el id del item a remover
-            onClick={clearCart}
-          >
-            Vaciar Carrito
-          </button>
+          <div className="row">
+            <p className=" col-6 my-3 mx-auto" style={{ fontSize: "2rem" }}>
+              Total del carrito: ${totalPrice}
+            </p>
+            <button
+              className="btn bg-warning my-3 col-4 mx-auto"
+              //cuando se clickea se ejecuta una funcion que llama a "removeItem" con parametro el id del item a remover
+              onClick={clearCart}
+            >
+              Vaciar Carrito
+            </button>
+          </div>
+          <div>
+            <Link to="/Checkout">
+              <button
+                className="btn bg-success my-3 col-6 mx-auto py-3"
+                // onClick={clearCart}
+              >
+                Finalizar Compra
+              </button>
+            </Link>
+          </div>
         </>
       ) : (
         <Link to="/">

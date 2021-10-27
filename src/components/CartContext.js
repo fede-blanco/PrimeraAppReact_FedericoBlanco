@@ -52,6 +52,13 @@ export const CartContextProvider = ({ children }) => {
     0
   );
 
+  //totalPrice muestra el total de la compra
+  const totalPrice = cartList.reduce(
+    (acc, product) => (acc += product.item.price * product.quantity),
+    0
+  );
+  parseInt(totalPrice);
+
   //console.log("carrito", cartList);
 
   return (
@@ -63,6 +70,7 @@ export const CartContextProvider = ({ children }) => {
         clearCart,
         removeItem,
         cartProducts,
+        totalPrice,
       }}
     >
       {children}

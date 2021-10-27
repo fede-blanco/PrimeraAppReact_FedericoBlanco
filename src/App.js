@@ -7,6 +7,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import CartWidget from "./components/CartWidget";
 import Cart from "./components/Cart";
 import { CartContextProvider } from "./components/CartContext";
+import Checkout from "./components/Checkout";
 
 //componentes funcionales
 function App() {
@@ -51,6 +52,10 @@ function App() {
             {/* Ruta que lleva del boton 'terminar compra' al componente carrito */}
             <Route path="/cart">
               <Cart />
+            </Route>
+
+            <Route path="/checkout">
+              <Checkout />
             </Route>
           </Switch>
           {/* si error deja de ser null y pasa a contener algo se renderizara el mensaje de error que se encontrara dentro del estado error al haber sido seteado en el catch de la promesa por el fallo de la misma */}
