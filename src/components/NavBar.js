@@ -7,13 +7,12 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        {/* <a className="navbar-brand d-flex" href="# ">
-          <img src={logo192} className="logoNav" alt="logoReact"></img>{" "}
-          <span className="brandName align-self-center">Federico Blanco</span>
-        </a> */}
         <Link className="navbar-brand d-flex" exact to="/">
           <img src={logo192} className="logoNav" alt="logoReact"></img>{" "}
-          <span className="brandName align-self-center">Federico Blanco</span>
+          <span className="brandName align-self-center">
+            Casa de Musica <br />
+            Federico Blanco
+          </span>
         </Link>
         <button
           className="navbar-toggler"

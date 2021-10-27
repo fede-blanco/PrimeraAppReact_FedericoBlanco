@@ -4,7 +4,6 @@ import "./App.css";
 import ItemListContainer from "./components/ItemListContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import CartWidget from "./components/CartWidget";
 import Cart from "./components/Cart";
 import { CartContextProvider } from "./components/CartContext";
 import Checkout from "./components/Checkout";
@@ -62,8 +61,6 @@ function App() {
           {error && <div>{error}</div>}
         </Router>
       </CartContextProvider>
-
-      {/* <ItemListContainer text="Bienvenidos a todos al sitio de Federico Blanco" /> */}
     </>
   );
 }
