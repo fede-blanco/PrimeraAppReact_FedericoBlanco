@@ -1,9 +1,5 @@
 import { createContext, useContext, useState } from "react";
 
-// link a la clase del otro profesor >> https://coderhouse.zoom.us/rec/play/ZY66q87L020241Tpb8Q7GDl-OsdksGt6gOUozZxtab6zYs6x7am93XQgirSOBis24JAY3K5SG8rlX5I8.xxv5sAXGYtxKDWNk?continueMode=true&_x_zm_rtaid=vUTGdUaKRaGBv9eAhDmrTQ.1634336584327.a060404c89c85449399f45b78a76ae0c&_x_zm_rhtaid=636
-
-//link al sandbox de walton >> https://codesandbox.io/s/github/germanWalton/AppReact/tree/master/my-app?file=/src/components/Cart.js
-
 export const CartContext = createContext([]);
 
 //creo un custom hook que utiliza el CartContext (asi me facilito el tener que exportar 'useContext' y 'CartContext') ahora solo debo exportar useCartContext
