@@ -10,7 +10,10 @@ const CartWidget = () => {
   return (
     <>
       <Link to="/cart">
-        <button className="btn btn-info">
+        <button
+          className="btn btn-info"
+          style={{ backgroundColor: "#bf9f11", border: "2px solid #bf9f11" }}
+        >
           <CgShoppingCart />
           &nbsp;
           {cartProducts > 0 ? (

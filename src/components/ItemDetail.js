@@ -57,7 +57,13 @@ export const ItemDetail = (item) => {
                   <>
                     <ItemCount onAdd={onAdd} stock={stock} initial="1" />
                     <Link to="/cart">
-                      <button className="btn btn-success my-3">
+                      <button
+                        className="btn btn-success my-3"
+                        style={{
+                          backgroundColor: "#1cbd67",
+                          border: "2px groove #1cbd67",
+                        }}
+                      >
                         Ir al detalle del carrito
                       </button>
                     </Link>
@@ -72,6 +78,10 @@ export const ItemDetail = (item) => {
               <button
                 onClick={closeDetail}
                 className="btn btn-danger w-50 p-1 m-2"
+                style={{
+                  backgroundColor: "#cf175a",
+                  border: "2px groove #cf175a",
+                }}
               >
                 Cerrar Detalle
               </button>

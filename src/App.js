@@ -20,7 +20,12 @@ function App() {
           <NavBar />
           {/* Se muestra el mensaje de "cargando..." hasta que se recupere la informacion de la promesa y se vuelva a poner en false */}
           {loading && (
-            <h1 style={{ color: "red", fontSize: "8rem" }}>CARGANDO...</h1>
+            <h1
+              className="text-center mt-5"
+              style={{ color: "#bf9f11", fontSize: "8rem" }}
+            >
+              CARGANDO...
+            </h1>
           )}
           <Switch>
             <Route exact path="/">

@@ -31,8 +31,12 @@ const Item = (props) => {
           </li>
         </ul>
         <div className="card-body">
-          <Link to={`/item/${id}`} className="btn btn-secondary">
-            detalle
+          <Link
+            to={`/item/${id}`}
+            className="btn btn-secondary"
+            style={{ backgroundColor: "#bf9f11", border: "2px groove #bf9f11" }}
+          >
+            Detalle
           </Link>
         </div>
       </div>

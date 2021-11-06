@@ -47,7 +47,11 @@ const ItemCount = (props) => {
           +
         </button>
       </div>
-      <button className="btn btn-warning w-100" onClick={() => onAdd(count)}>
+      <button
+        className="btn btn-warning w-100"
+        style={{ backgroundColor: "#bf9f11", border: "2px groove #bf9f11" }}
+        onClick={() => onAdd(count)}
+      >
         Agregar al Carrito
       </button>
     </>
